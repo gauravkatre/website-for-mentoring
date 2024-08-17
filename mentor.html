@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('C://Users//HP//Desktop//IIM-H.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .overlay {
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 300px;
+        }
+        .header-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .header-container p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 50px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+            width: 500px;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            width: 45%;
+        }
+        .form-group input,
+        .form-group select {
+            width: 50%;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+        .form-group input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="header-container">
+            <h1>Join us for Mentor</h1>
+            <p>Be the guide you needed when you were starting out.</p>
+            <p>If you're driven to support young professionals in their career journeys, here's your chance to make an impact. By dedicating just 20 minutes a week, you can help shape the future of aspiring individuals. We offer the tools and platform to connect you with eager learners and contribute to their success. Step up and join us in this fulfilling experience.</p>
+            <p><strong>Apply today to become a mentor, and we'll get in touch within 24 hours.</strong></p>
+            <p>* indicates required fields</p>
+        </div>
+
+        <div class="form-container">
+            <h2> Registration Form</h2>
+            <form action="submit_form.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name*</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number*</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="qualification">Highest Qualification*</label>
+                    <input type="text" id="qualification" name="qualification" required>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Total Experience*</label>
+                    <input type="text" id="experience" name="experience" required>
+                </div>
+                <div class="form-group">
+                    <label for="profile">Current Profile*</label>
+                    <input type="text" id="profile" name="profile" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Current Company Name*</label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="domain">Your Domain Expertise*</label>
+                    <input type="text" id="domain" name="domain" required>
+                </div>
+                <div class="form-group">
+                    <label for="sector">Your Sector Expertise*</label>
+                    <input type="text" id="sector" name="sector" required>
+                </div>
+                <div class="form-group">
+                    <label for="mentor">Who do you want to mentor?*</label>
+                    <select id="mentor" name="mentor" required>
+                        <option value="working_professionals">Working Professionals</option>
+                        <option value="students">Full Stact Development</option>
+                          <option value="students">Backend Developer</option>
+                           <option value="students">Data Scientist</option>
+                              <option value="students">AWS</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="institute">Student from which kind of institute?*</label>
+                    <select id="institute" name="institute" required>
+                        <option value="national_institutes">National Institutes</option>
+                        <option value="international_institutes">International Institutes</option>
+<option value="international_institutes">Private</option>
+<option value="Government">International Institutes</option>
+
+
+
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="interests">What are the things you are interested in?*</label>
+                    <select id="interests" name="interests" required>
+                        <option value="career_counselling">Career Counselling</option>
+                        <option value="technical_guidance">Technical Guidance</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="time_commitment">How much time can you commit in a week?*</label>
+                    <select id="time_commitment" name="time_commitment" required>
+                        <option value="20_minutes">20 minutes (1 slot)/Week</option>
+                        <option value="40_minutes">40 minutes (2 slots)/Week</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="day">Select Day of your availability</label>
+                    <select id="day" name="day">
+                        <option value="sunday">Sunday</option>
+                        <option value="monday">Monday</option>
+                        <option value="tuesday">Tuesday</option>
+                        <option value="wednesday">Wednesday</option>
+                        <option value="thursday">Thursday</option>
+                        <option value="friday">Friday</option>
+                        <option value="saturday">Saturday</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="time">Select Time</label>
+                    <select id="time" name="time">
+                        <option value="8_am">8:00 AM</option>
+                        <option value="10_am">10:00 AM</option>
+                        <option value="12_pm">12:00 PM</option>
+                        <option value="2_pm">2:00 PM</option>
+                        <option value="4_pm">4:00 PM</option>
+                        <option value="6_pm">6:00 PM</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="linkedin">Can you provide a link to your LinkedIn Profile?</label>
+                    <input type="url" id="linkedin" name="linkedin">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+>
+</body>
+</html>

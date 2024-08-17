@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extended Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input[type="text"], 
+        .form-group input[type="email"],
+        .form-group input[type="date"],
+        .form-group input[type="tel"],
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group input[type="radio"], 
+        .form-group input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .form-group button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Student Registration Form</h2>
+        <form action="submit_registration.php" method="post">
+            <!-- Student Name -->
+            <div class="form-group">
+                <label for="studentName">Student Name:</label>
+                <input type="text" id="studentName" name="studentName" required>
+            </div>
+
+            <!-- Parent Name -->
+            <div class="form-group">
+                <label for="parentName">Parent's Name:</label>
+                <input type="text" id="parentName" name="parentName" required>
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <!-- Gender -->
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <input type="radio" id="male" name="gender" value="male" required> Male
+                <input type="radio" id="female" name="gender" value="female"> Female
+                <input type="radio" id="other" name="gender" value="other"> Other
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <!-- Domain -->
+            <div class="form-group">
+                <label for="domain">Domain:</label>
+                <select id="domain" name="domain" required>
+                    <option value="">Select Domain</option>
+                    <option value="science">Science</option>
+                    <option value="commerce">Commerce</option>
+                    <option value="arts">Arts</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="medical">Medical</option>
+                </select>
+            </div>
+
+            <!-- Hobbies -->
+            <div class="form-group">
+                <label for="hobbies">Hobbies:</label>
+                <input type="checkbox" id="hobbyReading" name="hobbies" value="reading"> Reading
+                <input type="checkbox" id="hobbyMusic" name="hobbies" value="music"> Music
+                <input type="checkbox" id="hobbySports" name="hobbies" value="sports"> Sports
+                <input type="checkbox" id="hobbyTravel" name="hobbies" value="travel"> Travel
+                <input type="checkbox" id="hobbyCoding" name="hobbies" value="coding"> Coding
+                <input type="checkbox" id="hobbyArt" name="hobbies" value="art"> Art
+            </div>
+
+            <!-- Education -->
+            <div class="form-group">
+                <label for="education">Education Level:</label>
+                <input type="radio" id="educationUndergraduate" name="education" value="undergraduate" required> Undergraduate
+                <input type="radio" id="educationGraduate" name="education" value="graduate"> Graduate
+                <input type="radio" id="educationPostgraduate" name="education" value="postgraduate"> Postgraduate
+                <input type="radio" id="educationPhD" name="education" value="phd"> PhD
+            </div>
+
+            <!-- Address -->
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+
+            <!-- Nationality -->
+            <div class="form-group">
+                <label for="nationality">Nationality:</label>
+                <input type="text" id="nationality" name="nationality" required>
+            </div>
+
+            <!-- Previous School/College -->
+            <div class="form-group">
+                <label for="previousSchool">Previous School/College:</label>
+                <input type="text" id="previousSchool" name="previousSchool" required>
+            </div>
+
+            <!-- Guardian's Contact Number -->
+            <div class="form-group">
+                <label for="guardianContact">Guardian's Contact Number:</label>
+                <input type="tel" id="guardianContact" name="guardianContact" required>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
